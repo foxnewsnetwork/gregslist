@@ -4,6 +4,7 @@ import {
   Text,
   View
 } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const styles = StyleSheet.create({
   container: {
@@ -32,8 +33,8 @@ class HeaderNavigation extends Component {
   render() {
     return (
       <View style={styles.navigation}>
-        <Text>Menu</Text>
-        <Text>Company Name</Text>
+        <Icon name="bars" size={30} color="#000" style={{paddingLeft: 5, paddingRight: 5}} />
+        <Text style={{fontFamily: 'FontAwesome', flex: 2, textAlign: 'center'}}>Company Name</Text>
       </View>
     );
   }
