@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  Text,
   View
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 
-const styles = StyleSheet.create({
+import HeaderNavigation from './yelp/header-navigation';
+import BodyContent from './yelp/body-content';
+
+const Styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
@@ -14,46 +15,13 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     backgroundColor: '#666',
     marginTop: 20
-  },
-  navigation: {
-    flexDirection: 'row',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    backgroundColor: '#941423',
-    height: 45,
-  },
-  body: {
-    flex: 5,
-    flexDirection: 'column',
-    backgroundColor: '#def7f6',
   }
 });
-
-class HeaderNavigation extends Component {
-  render() {
-    return (
-      <View style={styles.navigation}>
-        <Icon name="bars" size={30} color="#000" style={{paddingLeft: 5, paddingRight: 5}} />
-        <Text style={{fontFamily: 'FontAwesome', flex: 2, textAlign: 'center'}}>Company Name</Text>
-      </View>
-    );
-  }
-}
-
-class BodyContent extends Component {
-  render() {
-    return (
-      <View style={styles.body}>
-        <Text>Images go here</Text>
-      </View>
-    );
-  }
-}
 
 export default class Yelp extends Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View style={Styles.container}>
         <HeaderNavigation />
         <BodyContent />
       </View>
